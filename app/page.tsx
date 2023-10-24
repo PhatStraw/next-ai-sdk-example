@@ -17,7 +17,11 @@ export default function SloganGenerator() {
             onChange={handleInputChange}
           />
         </form>
-        <div className="whitespace-pre-wrap my-4">{completion}</div>
+        {completion ? (
+          <div className="whitespace-pre-wrap my-4">{completion}</div>
+        ) : (
+          <div className="text-gray-500">Enter a business description to generate slogans.</div>
+        )}
       </div>
     </div>
   );
